@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Barra de navegación horizontal y barra vertical con Bulma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="css/barra.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <nav class="navbar is-primary is-fixed-top is-fullwidth">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <img src="logo.png" alt="Logo">
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="#">Inicio</a>
+                    <a class="navbar-item" href="#">Acerca de</a>
+                    <a class="navbar-item" href="#">Contacto</a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary" href="#">Registrarse</a>
+                            <a class="button is-light" href="#">Iniciar sesión</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="columns">
+        <div class="column is-one-quarter is-hidden-mobile sidebar">
+            <p>Contenido de la barra vertical</p>
+            <aside class="menu">
+                <div class="profile">
+                    <img src="../img/20.jpg" alt="Foto de perfil" class="profile-image">
+                    <h3 class="profile-name">Nombre: <span>Marcelino</span></h3>
+                    <h3 class="profile-lastname">Apellido: <span>Cardenas</span></h3>
+                </div>
+                <ul class="menu-list">
+                    <li><a class="#" href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#yo">Yo</a></li>
+                    <li><a href="#tu">Tu</a></li>
+                </ul>
+        </div>
+        <div class="column is-three-quarters main-content">
+            <div class="sections">
+
+                <section id="inicio" class="section">
+                    <br><h1>Hola, bienvenido a mi página web</h1>
+                </section>
+
+                <section id="nosotros" class="section">
+                    <h1>Sobre nosotros</h1>
+                </section>
+
+                <section id="yo" class="section">
+                    <h1>Acerca de mí</h1>
+                </section>
+
+                <section id="tu" class="section">
+                    <h1>Tu opinión cuenta</h1>
+                </section>
+            </div>
+
+            <div>
+                <h1>Titulo del main content</h1>
+                <p>Contenido del main content</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel feugiat tellus. Sed sit amet nibh
+                    turpis. Donec dictum nunc non orci laoreet, a suscipit velit iaculis. Morbi dignissim dolor ac ipsum
+                    tincidunt sagittis. Nulla facilisi. Nullam rhoncus, odio vel malesuada maximus, nisi enim egestas
+                    nibh,
+                    eu convallis elit nulla ut arcu. Nam aliquet lorem in velit euismod, a luctus magna egestas. Integer
+                    laoreet suscipit dolor, vel lacinia arcu consectetur quis. Sed sed odio vitae lorem convallis
+                    vulputate.
+                    Proin varius sodales magna, vel maximus enim pharetra a. Donec feugiat diam nec massa convallis, eu
+                    bibendum nisl tincidunt. Aliquam sed nibh id odio fermentum accumsan. Sed tempor elit elit, ac
+                    maximus
+                    dolor sagittis vel. Donec iaculis, mi id blandit aliquam, elit elit blandit arcu, vel facilisis
+                    velit
+                    libero vel velit. Curabitur et lectus in tellus blandit finibus. Duis ac odio vitae enim consequat
+                    interdum.</p>
+                <p>Nulla sed sagittis ex. Morbi lobortis lobortis enim, sit amet lacinia mauris vestibulum eu. Proin vel
+                    velit id nisi efficitur consequat. Nam malesuada ac ex at vulputate. Fusce sed erat leo. Vestibulum
+                    vehicula, odio vel tincidunt lacinia, ante tellus rhoncus velit, sit amet tincidunt odio nisl vel
+                    risus.
+                    Nunc vel tincidunt lectus. Praesent nec odio velit. Nulla faucibus tortor eu lorem ullamcorper
+                    vestibulum. Integer posuere bibendum quam ac fringilla. Donec viverra, mi id maximus imperdiet, est
+                    orci
+                    dapibus quam, sit amet consequat nisl orci sit amet augue. Suspendisse potenti.</p>
+                <p>Sed et est imperdiet, tincidunt nisi nec, consectetur nulla. Donec aliquet, sem in gravida faucibus,
+                    nisi
+                    metus finibus tellus, a lacinia lectus odio ac magna. Nulla facilisi. Nulla bibendum dolor et turpis
+                    ultricies, id vestibulum quam imperdiet. Sed sed risus eget velit convallis fermentum eu vitae enim.
+                    Aliquam ornare velit nec tortor convallis, in finibus enim bibendum. Sed efficitur mollis nunc ut
+                    elementum. Vivamus porttitor magna turpis, eu venenatis ipsum rhoncus ac.</p> <br>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script>
+        // Función para activar el menú de navegación móvil
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if (navbarBurgers.length > 0) {
+                navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
