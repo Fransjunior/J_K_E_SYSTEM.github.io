@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-... tu código de integridad ... " crossorigin="anonymous" />
     <link rel="stylesheet" href="css/cabecera.css" type="text/css">
 </head>
 
@@ -26,6 +27,15 @@
                     <source src="vid/1.mp4" type="video/mp4">
                     Tu navegador no soporta el elemento video.
                 </video>
+                <div class="icono col-lg-2 text-xl-center">
+                    <!-- <h4><strong>Follow Us </strong></h4> -->
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/groups/1294488344756687" target="_blank"><i class="fab fa-facebook fa-lg"></i></a></li><br>
+                        <li><a href="#"><i class="fab fa-twitter fa-lg"></i></a></li><br>
+                        <li><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li><br>
+                        <li><a href="https://wa.link/nn3p85" target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a></li><br>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
